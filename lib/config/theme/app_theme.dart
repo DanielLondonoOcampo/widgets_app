@@ -20,5 +20,8 @@ class AppTheme {
         assert(selectedColor <= colorList.length - 1,
             "Selected color must be less than or equal to ${colorList.length - 1}");
 
-  ThemeData getTheme() => ThemeData(colorSchemeSeed: colorList[selectedColor]);
+  ThemeData getTheme() => ThemeData(colorSchemeSeed: colorList[selectedColor],
+  appBarTheme: const AppBarTheme(
+    centerTitle: true
+  ));
 }
